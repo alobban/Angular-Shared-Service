@@ -9,6 +9,7 @@ import {AuthService} from './auth/auth.service';
 import { CallbackComponent } from './callback/callback.component';
 import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
+import { AuthCheckService } from './shared/auth-check.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { TestComponent } from './test/test.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ AuthService ],
+  providers: [ AuthService, AuthCheckService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

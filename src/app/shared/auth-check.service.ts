@@ -9,6 +9,8 @@ export class AuthCheckService {
   private authenticated: Authenticated;
   private subject: Subject<Authenticated> = new Subject<Authenticated>();
 
+  getAuthentication$ = this.subject.asObservable();
+
   setAuthenticated(authenticated: Authenticated): void {
     console.log(authenticated);
     this.authenticated = authenticated;
