@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import {AuthService} from './auth/auth.service';
 import { CallbackComponent } from './callback/callback.component';
 import { HomeComponent } from './home/home.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CallbackComponent,
-    HomeComponent
+    HomeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
