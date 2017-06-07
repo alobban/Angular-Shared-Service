@@ -5,10 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {AuthService} from './auth/auth.service';
+import { CallbackComponent } from './callback/callback.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CallbackComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +21,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
