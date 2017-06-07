@@ -36,10 +36,10 @@ export class TestComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnChanges() {
-    this.subscription = this.authCheckService.getAuthenticated().subscribe( authenticated => {
-      this.retrieved = authenticated;
-      console.log('Subscribing');
-    });
+    // this.subscription = this.authCheckService.getAuthenticated().subscribe( authenticated => {
+    //   this.retrieved = authenticated;
+    //   console.log('Subscribing');
+    // });
   }
 
   ngOnDestroy() {
