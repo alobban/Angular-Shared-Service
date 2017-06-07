@@ -68,7 +68,7 @@ export class AuthService {
     // Check whether the current time is past the
     // access token's expiry time
     const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-    if (new Date().getTime() < expiresAt) {
+    if (new Date().getTime() < expiresAt && localStorage.getItem('profile')) {
       this.userProfile = JSON.parse(localStorage.getItem('profile'));
       console.log(this.userProfile.name);
     }
